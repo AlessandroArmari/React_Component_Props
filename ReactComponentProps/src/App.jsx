@@ -3,6 +3,8 @@
 //...it creates a <h1> with stuff inside, indeed
 
 //It's important not to forget the {} for the paramaters
+
+/*
 const Component = ({ firstParam, secondParam }) => {
   return (
     <>
@@ -27,6 +29,37 @@ function App() {
       <br />
 
       <Component firstParam={"Parameter Changed"} secondParam={"Again"} />
+    </>
+  );
+}
+
+export default App;
+
+*/
+
+const Post = ({ parameter }) => {
+  return (
+    <>
+      <h2>I'm a fixed text inside the Component called "Post"</h2>
+      <span>{parameter}</span>
+    </>
+  );
+};
+
+function App() {
+  const array = ["I", "am", "part", "of", "an", "Array"];
+  return (
+    <>
+      <h3>
+        {array.map((element, index) => {
+          return (
+            <>
+              <Post parameter={element} />
+            </>
+          );
+        })}
+        ;
+      </h3>
     </>
   );
 }
