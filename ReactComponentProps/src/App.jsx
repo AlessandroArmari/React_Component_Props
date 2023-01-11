@@ -16,6 +16,7 @@ const Component = ({ firstParam, secondParam }) => {
 
 function App() {
   return (
+    //REMIND: the return() in App() takes just one single element (in this case: <> </>)
     <>
       <h1>Hello! (I don't belong to the component)</h1>
       <br />
